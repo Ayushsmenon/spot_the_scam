@@ -211,7 +211,7 @@ function checkAnswer(choice) {
     const q = quizData[index];
     const correct = (choice === q.answer);
 
-    flash(correct ? "correct" : "wrong");
+    // flash(correct ? "correct" : "wrong");
 
     modalTitle.textContent = correct ? "Correct!" : "Wrong!";
     modalBody.textContent = q.explanation;
@@ -219,7 +219,7 @@ function checkAnswer(choice) {
     modalBack.style.display = "flex";
 
     if (correct) {
-        modalBack.style.backgroundColor = "rgba(0,255,0,0,2)";
+        modalBack.style.backgroundColor = "rgba(0,255,0,0.2)";
     } else{
         modalBack.style.backgroundColor = "rgba(255,0,0,0.2)";
     }
