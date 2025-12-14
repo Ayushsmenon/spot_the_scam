@@ -95,13 +95,6 @@ h2, h3 { text-align: center; }
     white-space:pre-wrap;
     font-size:20px;
 }
-
-/* Flash */
-/* .flash-screen.correct { animation: flashGreen 10s; }
-.flash-screen.wrong { animation: flashRed 10s; }
-
-@keyframes flashGreen { 0%{background:#0aff0a;} 100%{background:#0b1220;} }
-@keyframes flashRed { 0%{background:#ff0000;} 100%{background:#0b1220;} } */
 </style>
 </head>
 
@@ -146,7 +139,7 @@ const quizData = [
     "answer": "Legit",
     "explanation": "A genuine alert often tells you to use the official number on your card or app, not a random link or phone number."
   }
-] ;
+];
 
 let index = 0;
 let score = 0;
@@ -164,7 +157,7 @@ function showStartScreen() {
         <p style="text-align:center;font-size:22px;">Can you identify real vs scam messages?</p>
 
         <button class="btn btn-green center-btn" onclick="startQuiz()">▶️ Start Quiz</button>
-    ;
+    `;
 }
 
 function startQuiz() {
@@ -172,7 +165,7 @@ function startQuiz() {
     score = 0;
     showQuestion();
 }
-`
+
 // Show Question
 function showQuestion() {
     const q = quizData[index];
@@ -197,21 +190,13 @@ function showQuestion() {
 
             <button class="btn btn-orange center-btn" onclick="showTips()">💡 Tips</button>
         </div>
-    ;
-`}
-
-// Flash effect
-// function flash(type) {
-//     document.body.classList.add("flash-screen", type);
-//     setTimeout(() => document.body.classList.remove("flash-screen", type), 250);
-// }
+    `;
+}
 
 // Check Answer
 function checkAnswer(choice) {
     const q = quizData[index];
     const correct = (choice === q.answer);
-
-    // flash(correct ? "correct" : "wrong");
 
     modalTitle.textContent = correct ? "Correct!" : "Wrong!";
     modalBody.textContent = q.explanation;
@@ -220,7 +205,7 @@ function checkAnswer(choice) {
 
     if (correct) {
         modalBack.style.backgroundColor = "rgba(0,255,0,0.2)";
-    } else{
+    } else {
         modalBack.style.backgroundColor = "rgba(255,0,0,0.2)";
     }
 
@@ -261,8 +246,8 @@ function showScore() {
 
             <button class="btn btn-green center-btn" onclick="showStartScreen()">Restart</button>
         </div>
-    ;
-`}
+    `;
+}
 
 // Load Start Screen
 showStartScreen();
@@ -270,4 +255,3 @@ showStartScreen();
 
 </body>
 </html>
-
