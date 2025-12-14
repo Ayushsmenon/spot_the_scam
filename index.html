@@ -164,7 +164,7 @@ function showStartScreen() {
         <p style="text-align:center;font-size:22px;">Can you identify real vs scam messages?</p>
 
         <button class="btn btn-green center-btn" onclick="startQuiz()">▶️ Start Quiz</button>
-    `;
+    ;
 }
 
 function startQuiz() {
@@ -172,7 +172,7 @@ function startQuiz() {
     score = 0;
     showQuestion();
 }
-
+`
 // Show Question
 function showQuestion() {
     const q = quizData[index];
@@ -197,8 +197,8 @@ function showQuestion() {
 
             <button class="btn btn-orange center-btn" onclick="showTips()">💡 Tips</button>
         </div>
-    `;
-}
+    ;
+`}
 
 // Flash effect
 // function flash(type) {
@@ -261,8 +261,8 @@ function showScore() {
 
             <button class="btn btn-green center-btn" onclick="showStartScreen()">Restart</button>
         </div>
-    `;
-}
+    ;
+`}
 
 // Load Start Screen
 showStartScreen();
