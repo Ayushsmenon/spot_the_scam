@@ -201,10 +201,10 @@ function showQuestion() {
 }
 
 // Flash effect
-function flash(type) {
-    document.body.classList.add("flash-screen", type);
-    setTimeout(() => document.body.classList.remove("flash-screen", type), 250);
-}
+// function flash(type) {
+//     document.body.classList.add("flash-screen", type);
+//     setTimeout(() => document.body.classList.remove("flash-screen", type), 250);
+// }
 
 // Check Answer
 function checkAnswer(choice) {
@@ -221,7 +221,7 @@ function checkAnswer(choice) {
     if (correct) {
         modalBack.style.backgroundColor = "rgba(0,255,0,0,2)";
     } else{
-        modalBack.style.backgroundCOlor = "rgba(255,0,0,0.2)";
+        modalBack.style.backgroundColor = "rgba(255,0,0,0.2)";
     }
 
     if (correct) score++;
